@@ -1,0 +1,67 @@
+<section id="about" class="relative overflow-hidden">
+    <div class="about-animate h-full w-full absolute bg-top bg-cover z-0" style="background-image: url({{post.get_field('bg_about')}});"></div>
+    <div class="pb-8 relative z-10 md:mb-12">
+        <div class="text-center pt-8 pb-3 md:py-8 md:pt-12">
+            <h2 id="about-trig" class="uppercase tracking-wide text-primary text-3xl pb-4 md:text-4xl lg:text-5xl">About</h2>
+            <p class="text-sm font-semibold tracking-wide pb-4 md:px-16 md:text-base">{{post.get_field('about_text')}}</p>
+        </div>
+        <div class="container mx-auto flex flex-wrap lg:px-2">
+
+            <div class="location mb-5 p-4 w-full md:w-1/2 md:mb-0 md:z-20 lg:max-w-sm">
+                <div class="shadow-lg bg-white">
+                    <div class="px-4 py-4 lg:pl-16">
+                        <div class="flex pt-2 pb-4">
+                            <p class="w-26 uppercase font-bold">Address</p>
+                            <p class="text-grey-darker text-sm md:text-lg">
+                                {{options.address}}
+                            </p>
+                        </div>
+                        <div class="flex pt-2 pb-6">
+                            <p class="w-26 uppercase font-bold">Phone</p>
+                            <p class="text-grey-darker text-base md:text-lg">
+                                <a class="align-middle bg-primary hover:bg-secondary text-white font-bold py-2 px-4 rounded-full no-underline" href="tel:{{options.phone}}">{{options.phone}}</a>
+                            </p>
+                        </div>
+                        <div class="flex pb-2">
+                            <p class="w-26 uppercase font-bold">Hours</p>
+                            <div class="flex leading-normal text-xs text-grey-darker md:text-base">
+                                <p>
+                                Sun<br>
+                                Mon<br>
+                                Tues<br>
+                                Wed<br>
+                                Thu<br>
+                                Fri<br>
+                                Sat<br>
+                                </p>
+                                <p class="pl-5">
+                                    {{options.hours}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-48">
+                        <iframe class="align-bottom" src="{{options.google_map}}" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact" class="contact w-full flex-grow md:w-1/2 md:-ml-32 md:-my-4">
+                <div class="relative md:h-full md:mr-4 lg:mr-0">
+                    <div class="bg-secondary opacity-75 h-full w-full absolute z-0"></div>
+                    <div class="px-4 py-8 z-10 relative text-white md:ml-32 md:pt-16 lg:pr-24 lg:pt-24 lg:ml-36">
+                        <div class="">
+                            <h3 class="pb-1 text-3xl z-20 font-bold text-shadow">Get In Touch</h3>
+                            <p class="pb-6 font-semibold">Feel free to contact us below!</p>
+                        </div>
+                        <div>
+                            {% set args = {'echo': false, 'redirect': '#contact'} %}
+                            {{ function('advanced_form', 'form_5bec59b6e0f87', args) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

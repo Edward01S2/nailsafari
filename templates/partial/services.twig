@@ -1,0 +1,26 @@
+<section id="services" class="flex-col justify-center items-center pt-6 pb-10 services-bg lg:py-12">
+    <h2 id="svc-trig" class="text-center uppercase text-primary tracking-wide text-3xl md:text-4xl lg:text-5xl lg:pb-4">Services</h2>
+
+    <div class="container mx-auto">
+        <div class="flex flex-wrap pt-5 px-4 md:flex-no-wrap md:-mx-2 lg:-mx-4">
+        {% for item in post.get_field('services') %}
+            <div class="w-full flex-grow md:flex-initial md:w-1/3 md:mx-2 lg:mx-4">
+                <div class="svc-animate bg-white border border-grey-light mb-4 flex-col leading-normal shadow-md md:opacity-0 lg:max-w-xs lg:mx-auto">
+                    <div class="hidden overflow-hidden md:block">
+                        <div class="w-auto h-64 services-img lg:h-92" style="background-image: url({{item.svc_image}});"></div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between text-lg lg:text-xl">
+                            <p class="mb-2 font-semibold text-primary tracking-wide">{{item.svc_name}}</p>
+                            <p class="text-grey-darker">${{item.svc_price}}</p>
+                        </div>
+                        <p class="text-grey-darker text-sm lg:text-base">{{item.svc_description}}</p>
+                    </div>
+                </div>
+            </div>
+        
+        {% endfor %}
+        </div>
+    </div>
+
+</section>

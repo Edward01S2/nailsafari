@@ -1,0 +1,18 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	{# <h2>{{ foo }}</h2> #}
+	{# {% for post in posts %}
+		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+	{% endfor %} #}
+	
+	{# {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %} #}
+
+	<section id="hero" class="h-90 flex items-center justify-center bg-grey-lighter">
+		<div class="text-center">
+			<h1 class="uppercase text-4xl">{{site.name}}</h1>
+			<h2 class="text-lg pt-3">Find the look that's right for you!</h2>
+		</div>
+		
+	</section>	
+{% endblock %}

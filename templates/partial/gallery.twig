@@ -1,0 +1,11 @@
+<section id="gallery">
+    <div class="gallery flex flex-wrap px-2 py-4 pb-8 container mx-auto">
+        {% for image in post.get_field('gallery') %}
+
+            <a class="w-1/2 px-2 pt-4 md:w-1/4 lg:px-4" href="{{TimberImage(image)}}">
+                <div class="pb-100 rounded-lg w-full bg-cover bg-center" style="background-image:url('{{TimberImage(image)}}')"></div>
+            </a>
+            
+        {% endfor %}
+    </div>
+</section>
