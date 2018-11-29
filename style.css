@@ -6436,6 +6436,10 @@ table {
   font-size: 3rem;
 }
 
+.text-5x {
+  font-size: 4rem;
+}
+
 .text-6xl {
   font-size: 5rem;
 }
@@ -12858,6 +12862,10 @@ table {
     font-size: 3rem;
   }
 
+  .sm\:text-5x {
+    font-size: 4rem;
+  }
+
   .sm\:text-6xl {
     font-size: 5rem;
   }
@@ -18874,6 +18882,10 @@ table {
 
   .md\:text-5xl {
     font-size: 3rem;
+  }
+
+  .md\:text-5x {
+    font-size: 4rem;
   }
 
   .md\:text-6xl {
@@ -24894,6 +24906,10 @@ table {
     font-size: 3rem;
   }
 
+  .lg\:text-5x {
+    font-size: 4rem;
+  }
+
   .lg\:text-6xl {
     font-size: 5rem;
   }
@@ -30910,6 +30926,10 @@ table {
 
   .xl\:text-5xl {
     font-size: 3rem;
+  }
+
+  .xl\:text-5x {
+    font-size: 4rem;
   }
 
   .xl\:text-6xl {
