@@ -1,2 +1,2 @@
-vendor
-wp-content
+.gitignore
+node_modules
